@@ -1,4 +1,5 @@
 import React from 'react';
+import faker from 'faker';
 
 const Main = () => {
     return (
@@ -6,18 +7,18 @@ const Main = () => {
             <div className="comment">
 
                 <a href="/" className="avatar">
-                    <img src="" alt="avatar"/>
+                    <img src={faker.image.avatar()} alt="avatar"/>
                 </a>
 
                 <div className="content">
                     <a href="/" className="author">
-                        Amir
+                        {faker.name.firstName()} {faker.name.lastName()}
                     </a>
                     <div className="metadata">
                         <span className="date">Today at 7:00AM</span>
                     </div>
                     <div className="test">
-                        Nice post content...
+                        {faker.lorem.text()}
                     </div>
                 </div>
 
