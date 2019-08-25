@@ -33,3 +33,5 @@ ReactDOM.render(<App/>, document.getElementById('root'));
 2. Component Reusability: _A component can be easily reused through out the application_
 3. Component Configuration: _A component can be configured when is created_
 
+## Props
+> A System to pass data from a parent to a child component, to make a child component configurable by parent
