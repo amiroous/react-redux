@@ -1,7 +1,7 @@
 import React from 'react';
 import Comments from "./Comments";
 
-const Main = () => {
+const ProjectCommentApproval = () => {
     return (
         <div className="ui basic segment">
             <Comments count={3} />
@@ -9,4 +9,4 @@ const Main = () => {
     );
 };
 
-export default Main;
+export default ProjectCommentApproval;
