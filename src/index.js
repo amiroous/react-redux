@@ -2,10 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
-import ProjectCommentApproval from './component/ProjectCommentApproval';
+// import ProjectCommentApproval from './component/ProjectCommentApproval';
 import * as serviceWorker from './serviceWorker';
+import ProjectSeason from "./component/ProjectSeason";
 
-ReactDOM.render(<ProjectCommentApproval />, document.getElementById('root'));
+ReactDOM.render(<ProjectSeason />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

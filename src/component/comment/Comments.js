@@ -1,7 +1,7 @@
 import React from 'react';
-import CommentDetail from "./Comment/CommentDetail";
+import CommentDetail from "./CommentDetail";
 import faker from "faker";
-import ApprovalCard from "./Card/ApprovalCard";
+import ApprovalCard from "../card/ApprovalCard";
 
 
 const getComments = () => ([

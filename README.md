@@ -35,3 +35,21 @@ ReactDOM.render(<App/>, document.getElementById('root'));
 
 ## Props
 > A System to pass data from a parent to a child component, to make a child component configurable by parent
+
+## State
+> A JavaScript Object that contains relevant data to a component
+> - updating `state` on a component causes the component to almost instantly rerender.
+> - `state` must be initialized when a component si created (_the only time we do `this.state` as direct assignment_).
+> - `state` can only be updated using the `setState` function.
+
+## Component Lifecycle
+> 1. `constructor` do one time setups
+> 2. `render` avoid doing anything besides returning JSX
+>   * then content is visible ...
+> 3. `componentDidMount` do fetch/api calls and initial data loading (one time)
+>   * then waiting for any updates ...
+> 4. `componentDidUpdate` more data loading every single time and when state/props change
+>   * then waiting for component is being no longer visible ...
+> 5. `componentWillUnmount` do cleanup
+
+> Also `shouldComponentUpdate`, `getDerivedStateFromProps`, `getSnapshotBeforeUpdate`
