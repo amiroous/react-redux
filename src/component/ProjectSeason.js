@@ -46,8 +46,17 @@ class ProjectSeason extends Component {
 
     render() {
 
+        const style = {
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            minHeight: "100vh"
+        };
+
         return (
-            this.renderProject()
+            <div style={style}>
+                {this.renderProject()}
+            </div>
         );
     }
 }
