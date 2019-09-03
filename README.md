@@ -53,3 +53,56 @@ ReactDOM.render(<App/>, document.getElementById('root'));
 > 5. `componentWillUnmount` do cleanup
 
 > Also `shouldComponentUpdate`, `getDerivedStateFromProps`, `getSnapshotBeforeUpdate`
+
+
+### Handle Contexts of `this`
+> Uncaught TypeError: Cannot read property 'state' of undefined
+
+##### 1. Use `bind` and `constructor`:
+```
+class Component {
+    constructor(props) {
+        super(props);
+        this.onChangeHandler = this.onChangeHandler.bind(this);
+    }
+    
+    onChangeHandler(e) {
+       // Code ...   
+    }
+    
+    render() {
+        <input onChange={this.onChangeHandler} />
+    }
+}
+```
+
+##### 2. Use "ES6 Arrow Function" to Define the Class Method
+> __REMINDER on ARROW FUNCTIONS:__
+> - "Arrow Function", use "Lexical Scope" (Lexical Environment of the running execution context).
+> - An ArrowFunction does not define local bindings for arguments, super, this, or new.target. 
+> - Any reference to arguments, super, this, or new.target within an ArrowFunction must resolve to a binding in a lexically enclosing environment. Typically this will be the Function Environment of an immediately enclosing function. 
+```
+class Component {
+    onChangeHandler = (e) => {
+        // Code ...   
+    }
+    
+    render() {
+        <input onChange={this.onChangeHandler} />
+    }
+}
+```
+
+##### 3. Use "ES6 Arrow Function" to Call the Class Method (**Recommended)
+```
+class Component {
+    
+    onChangeHandler(e) {
+       // Code ...   
+    }
+    
+    render() {
+        <input onChange={(e) => this.onChangeHandler(e)} />
+    }
+}
+```
