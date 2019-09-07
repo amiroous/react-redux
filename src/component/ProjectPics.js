@@ -17,17 +17,27 @@ class ProjectPics extends Component {
     render() {
 
         return (
-            <div className="ui container-fluid">
-                <SearchBar handleSearchSubmit={(term) => this.onSearchSubmit(term)}/>
-                <div className="ui basic segment statistic">
-                    <div className="label">
-                        Found
-                    </div>
-                    <div className="value">
-                        {this.state.images.length}
+            <div className="ui padded grid">
+                <div className="row">
+                    <div className="column">
+                        <SearchBar handleSearchSubmit={(term) => this.onSearchSubmit(term)}/>
                     </div>
                 </div>
-                <ImageList images={this.state.images} />
+                <div className="row">
+                    <div className="column ui statistic">
+                        <div className="label">
+                            Found
+                        </div>
+                        <div className="value">
+                            {this.state.images.length}
+                        </div>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="column">
+                        <ImageList images={this.state.images} />
+                    </div>
+                </div>
             </div>
         );
     }

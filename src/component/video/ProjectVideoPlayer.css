@@ -1,0 +1,8 @@
+.video-player .item .content {
+    cursor: pointer;
+    display: flex;
+}
+
+.video-player .item .content .item-title {
+    margin-left: 10px;
+}
