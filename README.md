@@ -106,3 +106,78 @@ class Component {
     }
 }
 ```
+
+
+## Redux
+
+### Redux Components
+1. Action Creator
+    > A function that creates an action
+2. Action
+    > An action is a plain object that represents an intention to change the state.  
+    Actions are the only way to get data into the store.  
+    Action object `{type: 'ACTION_TYPE', payload: {}}`
+3. Dispatch
+    > A function that takes in an action, makes copies of the action, and sends them out to the reducers.
+4. Reducers
+    > A function that takes in an action and some existing data, changes the data according to the type and payload of the action, and then sends the updated data to the state.
+5. State
+    > An object that serves as the central repository of all data from the reducers.
+
+### React-Redux Components
+1. Store
+    > The Store contains the consolidated reducers and the state.
+2. Provider
+    > The Provider is a component that has a reference to the Store and provides the data from the Store to the component it wraps.
+3. Connect
+    > Connect is a function communicates with the Provider. Whatever component we wrap with Connect, that component will be able to get changes in the Store state from the Provider.
+
+### Redux Three Principles
+1. Single source of truth
+    > The state of your whole application is stored in an object tree within a single store.
+2. State is read-only
+    > The only way to change the state is to emit an action
+3. Changes are made with pure functions
+    > To specify how the state tree is transformed by actions, you write pure reducers.
+
+### Redux Analogy
+> Here we are mapping the Redux analogy to a very close system like an insurance company
+![](notes/images/redux_insurance_mapping.png)
+
+__Insurance Company Components__
+1. Customer/Insured
+2. Insurance Forms (Policy, Claim)
+3. Form Receiver (Insurance Agent)
+4. Departments (Policy, Claims, Accounting)
+5. Data Center
+
+__Redux Components Mapped to Insurance Company Components__
+- Action Creator (Customer)
+- Action (Forms)
+- Dispatch (Agent)
+- Reducers (Departments)
+- State (Data Center)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
