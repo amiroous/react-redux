@@ -120,7 +120,11 @@ class Component {
 3. Dispatch
     > A function that takes in an action, makes copies of the action, and sends them out to the reducers.
 4. Reducers
-    > A function that takes in an action and some existing data, changes the data according to the type and payload of the action, and then sends the updated data to the state.
+    > A function that takes in an action and some existing data, changes the data according to the type and payload of the action, and then sends the updated data to the state.   
+    > * Must return any value excluding 'undefined'
+    > * Produces `state` using ONLY previous state and the action
+    > * Should not reach out of itself to decide what value should be returned (Reducers are pure functions)
+    > * Should not mutate its input state argument (copy and return new state)
 5. State
     > An object that serves as the central repository of all data from the reducers.
 
@@ -158,6 +162,21 @@ __Redux Components Mapped to Insurance Company Components__
 - Reducers (Departments)
 - State (Data Center)
 
+### React Data Loading with Redux
+![](notes/images/data_loading_react_redux.png)
+
+### Redux Middleware
+> A middleware is a higher-order function that composes a dispatch function to return a new dispatch function. It often turns async actions into actions.   
+> It is useful for logging actions, performing side effects like routing, or turning an asynchronous API call into a series of synchronous actions.   
+> * Gets called with every action we dispatch
+> * Has ability to STOP, MODIFY actions
+> * Mostly used fro dealing with Async actions
+
+
+__Redux Thunk:__
+> Redux Thunk is a commonly used middleware for asynchronous orchestration.   
+> A thunk is a "function" that returns another function that takes parameters `dispatch` and `getState`.   
+> By `dispatch` we can change any data we want and by `getState` we can read any data we want.
 
 
 
