@@ -179,6 +179,13 @@ __Redux Thunk:__
 > By `dispatch` we can change any data we want and by `getState` we can read any data we want.
 
 
+### React Router
+
+__Router Types__
+> Important for Deployment
+1. Browser Router (Most complicated to deploy on realistic settings)
+2. Hash Router (Best for distinguishing between traditional server side routing and client side routing)
+3. Memory Router
 
 
 
