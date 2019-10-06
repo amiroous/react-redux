@@ -188,6 +188,10 @@ __Router Types__
 3. Memory Router
 
 
+### Redux Form
+![](notes/images/redux_form_flow.png)
+
+
 
 
 
