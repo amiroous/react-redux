@@ -20,6 +20,12 @@
       "title": "Forth Stream",
       "userId": "115638633847879222976",
       "id": 4
+    },
+    {
+      "description": "This is the fifth available stream.",
+      "title": "Fifth Stream",
+      "userId": "115638633847879222976",
+      "id": 5
     }
   ]
 }

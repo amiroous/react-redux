@@ -8,6 +8,7 @@ import {
     EDIT_STREAM,
     DELETE_STREAM
 } from '../actions/types';
+import browserHistory from "../browserHistory";
 
 export const signIn = (userId) => {
 
@@ -33,6 +34,8 @@ export const createStream = (streamData) => async (dispatch, getState) => {
         type: CREATE_STREAM,
         payload: response.data
     });
+
+    browserHistory.push('/');
 };
 
 export const fetchStreams = () => async (dispatch) => {

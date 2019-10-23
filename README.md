@@ -172,6 +172,7 @@ __Redux Components Mapped to Insurance Company Components__
 > * Has ability to STOP, MODIFY actions
 > * Mostly used fro dealing with Async actions
 
+![](notes/images/react_redux_flow_01.gif)
 
 __Redux Thunk:__
 > Redux Thunk is a commonly used middleware for asynchronous orchestration.   
