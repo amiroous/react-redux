@@ -60,12 +60,14 @@ export const fetchStream = (streamId) => async (dispatch) => {
 
 export const editStream = (streamId, streamData) => async (dispatch) => {
 
-    const response = await streams.put(`/streams/${streamId}`, streamData);
+    const response = await streams.patch(`/streams/${streamId}`, streamData);
 
     dispatch({
         type: EDIT_STREAM,
         payload: response.data
     });
+
+    browserHistory.push('/');
 };
 
 export const deleteStream = (streamId) => async (dispatch) => {

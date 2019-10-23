@@ -26,6 +26,12 @@
       "title": "Fifth Stream",
       "userId": "115638633847879222976",
       "id": 5
+    },
+    {
+      "title": "Sixth Stream",
+      "description": "This is the sixth available stream.",
+      "userId": "115638633847879222976",
+      "id": 6
     }
   ]
 }
