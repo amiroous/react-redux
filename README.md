@@ -193,6 +193,12 @@ __Router Types__
 ![](notes/images/redux_form_flow.png)
 
 
+### React Context
+![](notes/images/context-01.png)
+![](notes/images/context-02.png)
+![](notes/images/context-03.png)
+![](notes/images/context-04.png)
+
 
 
 
